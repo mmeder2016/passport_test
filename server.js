@@ -26,6 +26,10 @@ passport.deserializeUser(User.deserializeUser());
 
 require("./routes/login-routes.js")(app);
 
+app.post('/login', passport.authenticate('local', {
+    successRedirect: '/homepage',
+    failureRedirect: '/'
+}));
 
 db.sequelize.sync({}).then(function() {
     app.listen(PORT, function() {

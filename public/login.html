@@ -19,11 +19,11 @@
             padding: 5px;
         }
         
-        .btn-signup {
+        .btn-register {
             float: left;
         }
         
-        .btn-signin {
+        .btn-login {
             float: right;
         }
     </style>
@@ -35,10 +35,10 @@
             <div class="col-md-4">
                 <div class="panel panel-default login">
                     <div class="panel-heading">
-                        <h3 class="panel-title">Sign In</h3>
+                        <h3 class="panel-title">Login with credentials or click on Register to open new account</h3>
                     </div>
                     <div class="panel-body">
-                        <form action="/authenticate" method="post">
+                        <form action="/login" method="post">
                             <div class="div-user">
                                 <label>Username</label>
                                 <input id="user" name="username" placeholder="Username" type="text" />
@@ -48,8 +48,8 @@
                                 <input id="pw" name="password" placeholder="Password" type="password">
                             </div>
                             <div class="form-actions div-btns">
-                                <a class="btn btn-primary btn-signup" href="/signup"> Sign Up!</a>
-                                <button type="submit" class="btn btn-success btn-signin">Sign In</button>
+                                <a class="btn btn-primary btn-register" href="/signup">Register</a>
+                                <button type="submit" class="btn btn-success btn-login">Login</button>
                             </div>
                         </form>
                     </div>
