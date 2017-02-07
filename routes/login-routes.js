@@ -57,7 +57,7 @@ module.exports = function(app) {
 
     // POST 2.) Authenticate a login for a user. The only action taken at this
     // time is re-direction to appropriate pages for success and failure.
-    app.post('/login', passport.authenticate('local', {
+    app.post('/login', app.get('passport').authenticate('local', {
         successRedirect: '/homepage',
         failureRedirect: '/'
     }));
